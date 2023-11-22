@@ -1,11 +1,11 @@
 from question_model import Question
-from data import question_data
+from data import new_data
 from quiz_brain import QuizBrain
 
 question_bank = []
 
-for question in question_data:
-    new_question = Question(question["text"], question["answer"])
+for question in new_data:
+    new_question = Question(question["question"], question["correct_answer"])
     question_bank.append(new_question)
 
 quizz = QuizBrain(question_bank)
